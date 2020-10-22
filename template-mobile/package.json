@@ -1,0 +1,9 @@
+{
+  "name": "crna-template-mobile",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "template",
+    "template.config.js"
+  ]
+}

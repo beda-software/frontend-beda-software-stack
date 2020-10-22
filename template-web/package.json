@@ -1,0 +1,10 @@
+{
+  "name": "cra-template-web",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "main": "template.json"
+}
