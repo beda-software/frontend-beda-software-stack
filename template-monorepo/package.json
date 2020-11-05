@@ -10,7 +10,8 @@
         "start": "lerna run --parallel start",
         "start:web": "lerna run start --parallel --scope web --scope shared",
         "start:mobile": "lerna run start --parallel --scope mobile --scope shared",
-        "build": "npm run prepare && lerna run --parallel build"
+        "build": "npm run prepare && lerna run --parallel build",
+        "typecheck": "npm run prepare && lerna run --parallel typecheck"
     },
     "devDependencies": {
         "@react-native-community/eslint-config": "^2.0.0",
