@@ -1,5 +1,5 @@
 import { Navigation } from 'react-native-navigation';
-import { <%= ComponentName %>, Props } from './index'
+import { <%= ComponentName %><% if (isRootScreen) { %>, Props<% } %> } from './index'
 
 const componentName = 'AppName.<%= ComponentName %>';
 

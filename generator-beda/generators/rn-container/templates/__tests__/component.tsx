@@ -1,7 +1,8 @@
+import React from 'react';
 import renderer from 'react-test-renderer';
 import { <%= ComponentName %> } from '../index';
 <% if (useHook) { %>
-jest.mock('../hooks', ({
+jest.mock('../hooks', () => ({
     use<%= ComponentName %>: jest.fn(),
 }));<% } %>
 

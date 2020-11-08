@@ -1,17 +1,14 @@
 import React from 'react';
-import styles from './styles';
-<% if (useHook) { %>
+import { View, Text } from 'react-native';<% if (useHook) { %>
 import { use<%= ComponentName %> } from './hooks';
 <% } %>
+
+import styles from './styles';
 
 interface Props {
 }
 
-export interface NavigationProps {
-    componentId: string;
-}
-
-export function <%= ComponentName %>(props: NavigationPropss & Props) {
+export function <%= ComponentName %>(props: Props) {
 <% if (useHook) { %>
     const value = use<%= ComponentName %>();
 
