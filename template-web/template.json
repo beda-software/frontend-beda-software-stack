@@ -38,13 +38,15 @@
       "last 1 safari version"
     ]
   },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!axios)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ]
+  "package": {
+    "jest": {
+      "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+      },
+      "transformIgnorePatterns": [
+        "node_modules/(?!axios)$",
+        "^.+\\.module\\.(css|sass|scss)$"
+      ]
+    }
   }
 }
