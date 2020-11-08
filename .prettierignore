@@ -3,3 +3,4 @@ build
 ios
 android
 *.d.ts
+generator-beda/generators/*/templates/*
