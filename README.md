@@ -1,4 +1,6 @@
-# Monorepo template
+# Beda Software - Frontent project generator
+
+## What is the purpose of this project?
 
 This template includes:
 
@@ -13,7 +15,12 @@ This template includes:
 - A shared repository
 
 
-# Usage
+## Usage (if you want to create a new frontend project)
+
+Install a [Yeoman](https://www.npmjs.com/package/yo)
+``` ```
+
+## npx
 
 Run in console:
 
@@ -23,7 +30,7 @@ cd ./frontend
 yarn start
 ```
 
-# Development
+# Development (if you want to change this generator or its templates)
 
 For development - clone the repo then try to run application generator:
 
