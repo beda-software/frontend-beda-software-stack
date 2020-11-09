@@ -16,6 +16,8 @@ cd ./frontend
 yarn start
 ```
 
+For advanced usage and other details check [`template-monorepo`](./template-monorepo/README.md) please
+
 # Development
 
 For development - clone the repo then try to run application generator:
