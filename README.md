@@ -27,24 +27,25 @@ This template includes:
 
 3. Reply to questions:
 
-* ```What do you want to create:```
+* ```What do you want to create:``` Choose "Project".
 
-Choose "Project".
+* ```Path to monorepo git repository:``` Hit "Enter" to use default template. If you want to use another template, provide a path to the git repository with another template. Can I provide a link to a local directory?
 
-* ```Path to monorepo git repository:```
+* ```Your mobile project name:``` Provide a name for mobile app directory that will be added to the frontent directory, e.g. "mobile".
 
-Hit "Enter" to use default template. If you want to use another template, provide a path to the git repository with another template. Can I provide a link to a local directory?
+Wait while generator is installing project files in the "frontend" directory.
 
-* ```Your mobile project name:```
-
-Provide a name for mobile app directory that will be added to the frontent directory, e.g. "mobile".
-
-Run in console:
-
+4. Go to the "frontend" directory:
 ```
 cd ./frontend
+```
+
+5. Run the project:
+```
 yarn start
 ```
+
+> (?) How can I start ony web or mobile app?
 
 # Development (if you want to change this generator or its templates)
 
