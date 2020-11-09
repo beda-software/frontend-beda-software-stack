@@ -8,8 +8,15 @@ This template includes:
 
 # Usage
 
-TODO: describe how to use using `yo beda`
+Run in console:
 
 ```
-yo ./generator-beda/generators/app
+npx yo beda
+```
+
+Or clone repo then try to run the project generator from repo:
+
+```
+git clone git@github.com:beda-software/frontend-beda-software-stack.git
+npx yo ./frontend-beda-software-stack/generator-beda/generators/app
 ```
