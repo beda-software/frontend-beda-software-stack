@@ -6,7 +6,7 @@ import config from 'shared/lib/config';
 
 if (config.webSentryDSN) {
     Sentry.init({
-        dsn: config.webSentryDSN,
+        dsn: config.webSentryDSN!,
     });
     Sentry.configureScope((scope) => {
         scope.setTag('environment', config.tier);

@@ -67,6 +67,7 @@ module.exports = class extends Generator {
         this.spawnCommandSync('yarn', ['workspace', 'mobile', 'add', 'shared@0.0.1'], { cwd });
         this.spawnCommandSync('yarn', ['prepare'], { cwd });
         this.spawnCommandSync('rm', ['web/yarn.lock'], { cwd });
+        this.spawnCommandSync('cp', ['shared/src/config.local.ts', 'shared/src/config.ts'], { cwd });
         this.spawnCommandSync('yarn', ['exec', 'node', './node_modules/husky/husky.js', 'install'], { cwd });
 
         // Delete eslint config added by CRA from web because we use common eslint config in the root
