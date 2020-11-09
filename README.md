@@ -17,11 +17,18 @@ This template includes:
 
 ## Usage (if you want to create a new frontend project)
 
-1. Install a [Yeoman](https://www.npmjs.com/package/yo)
+1. Install a [Yeoman](https://www.npmjs.com/package/yo) globally:
+
 ```npm install -g yo```
 
-2. Run the generator
+2. Run this generator:
+
 ```npx yo beda```
+
+3. Reply to questions:
+> "What do you want to create" -> "Project"
+> "Path to monorepo git repository" -> Hit "Enter" to use default template. If you want to use another template, provide a path to the git repository with another template. Can I provide a link to a local directory?
+> "Your mobile project name" -> Provide a name for mobile app directory that will be added to the frontent directory.
 
 Run in console:
 
