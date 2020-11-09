@@ -12,6 +12,8 @@ Run in console:
 
 ```
 npx yo beda
+cd ./frontend
+yarn start
 ```
 
 # Development
