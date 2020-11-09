@@ -1,5 +1,27 @@
 # Generator
 
+Usage: 
+
+```
+npx yo beda
+```
+
+## Application generator
+
+Usage:
+
+```
+npx yo beda:app
+```
+
+## React Native container generator 
+
+Usage: 
+
+```
+npx yo beda:rn-container
+```
+
 Generated code depends on:
 
 - `react`
@@ -7,33 +29,25 @@ Generated code depends on:
 - `react-test-renderer`
 - `jest`
 
-## Usage
 
-```
-npx yo beda
-npx yo beda:app # Application
-npx yo beda:component # React Native Container component
-```
+# Generators development
 
-## Development
+For local generator development:
 
-Install [yeoman](https://yeoman.io/):
+1. Install [yeoman](https://yeoman.io/):
 
 ```
 npm install -g yo
 ```
 
-Link local project as npm package:
+2. Link local project as npm package:
 
 ```
 npm link
 ```
 
-Run generator:
+3. Run specified generator, for example:
 
 ```
-yo beda
-yo beda:app # Application
-yo beda:component # React Native Container component
+yo beda:rn-container
 ```
-
