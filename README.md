@@ -11,18 +11,14 @@ This generator helps to create predefined frontend (web and mobile) applications
 
 ### What’s Included?
 
-react
-
-react-test-renderer
-jest
-
-- A web application based on the create react app `typescript` template 
-- A React Native mobile application (iOS/Android) with `react-native-navigation`
-- A shared repository with default FHIR and Aidbox resources type declarations
-- Plugged in [aidbox-react](https://github.com/beda-software/aidbox-react) package
-- Shared ESLint and Prettier configuration files
-- CI/CD files (Docker, GitLab) including files to run tests using Aidbox
-- An inialized and configured Git repository
+- A web application based on the create react app [typescript template](https://create-react-app.dev/docs/getting-started#creating-a-typescript-app);
+- A React Native mobile application (iOS/Android) with `react-native-navigation`;
+- A shared repository with default FHIR and Aidbox resources type declarations;
+- Plugged in [aidbox-react](https://github.com/beda-software/aidbox-react) package;
+- Shared ESLint and Prettier configuration files;
+- [react-test-renderer](https://www.npmjs.com/package/react-test-renderer);
+- CI/CD files (Docker, GitLab) including files to run tests using Aidbox;
+- An inialized and configured Git repository.
 
 (?) Two index.d.ts files?
 
