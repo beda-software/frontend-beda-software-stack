@@ -14,9 +14,18 @@ Run in console:
 npx yo beda
 ```
 
-For development usage - clone the repo then try to run project generator:
+# Development
+
+For development - clone the repo then try to run application generator:
 
 ```
 git clone git@github.com:beda-software/frontend-beda-software-stack.git
-npx yo ./frontend-beda-software-stack/generator-beda/generators/app
+cd ./frontend-beda-software-stack
+npx yo ./generator-beda/generators/app
+```
+
+Set the current repo path as `.` as answer for the following question:
+
+```
+? Path to monorepo git repository (https://github.com/beda-software/frontend-beda-software-stack.git)
 ```
