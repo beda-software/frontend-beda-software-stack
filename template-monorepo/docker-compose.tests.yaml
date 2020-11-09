@@ -8,7 +8,7 @@ services:
     links:
       - backend
   backend:
-    image: $BACKEND_IMAGE
+    image: $TESTS_BACKEND_IMAGE
     command: ["wait-for-it.sh", "devbox:8080", "--strict", "--timeout=0", "--", "gunicorn", "main:create_app", "--worker-class", "aiohttp.worker.GunicornWebWorker", "-b", "0.0.0.0:8081"]
     env_file:
     - env_tests
@@ -28,8 +28,8 @@ services:
     env_file:
       - env_tests
     environment:
-      AIDBOX_LICENSE_ID: ${AIDBOX_LICENSE_ID_TESTS}
-      AIDBOX_LICENSE_KEY: ${AIDBOX_LICENSE_KEY_TESTS}
+      AIDBOX_LICENSE_ID: ${TESTS_AIDBOX_LICENSE_ID}
+      AIDBOX_LICENSE_KEY: ${TESTS_AIDBOX_LICENSE_KEY}
     volumes:
       - ./wait-for-it.sh:/usr/local/bin/wait-for-it.sh
     ports:

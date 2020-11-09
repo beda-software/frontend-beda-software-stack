@@ -57,7 +57,9 @@ module.exports = class extends Generator {
         this.spawnCommandSync('rm', ['-rf', './template-monorepo'], { cwd });
         this.spawnCommandSync('rm', ['-rf', './generator-beda'], { cwd });
         this.spawnCommandSync('rm', ['-rf', './.git'], { cwd });
+
         this.spawnCommandSync('git', ['init'], { cwd });
+        this.spawnCommandSync('git', ['checkout', '-b', 'develop'], { cwd });
 
         this.spawnCommandSync('yarn', ['workspace', 'web', 'add', 'shared@0.0.1'], {
             cwd,

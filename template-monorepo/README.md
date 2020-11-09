@@ -1,36 +1,31 @@
-## Installation
+## Local setup
 
--   To create project from web template
+In the project we have three environments:
 
-```sh
-npx create-react-app web --template file:template-web
+-   develop
+-   staging
+-   production
+
+Local environment is required for developing. Before you start, run:
+
+```
+cp shared/src/config.local.ts shared/src/config.ts
 ```
 
--   To create project from mobile template. For `--template` parameter use absolute path to the template
+This file (`shared/src/config.ts`) is ignored by git. So, feel free to change it.
 
-```sh
-npx react-native init MobileAppName --template file://${FullPathToProjectDir}/template-mobile --directory mobile
-```
+## CI/CD setup
 
--   Add `shared` workspace to projects dependencies
+See [mobile/README.md](mobile/README.md) for initial setup.
 
-```sh
-yarn workspace web add shared@0.0.1
-yarn workspace mobile add shared@0.0.1
-yarn prepare
-```
+CI/CD for whole monorepo is already set up using .gitlab-ci.yml. You need only to set CI/CD variables:
 
--   Add `src/services/initialize.ts` file to mobile and web projects
+-   TESTS_AIDBOX_LICENSE_ID
+-   TESTS_AIDBOX_LICENSE_KEY
+-   TESTS_BACKEND_IMAGE_REPOSITORY (something like registry.bro.engineering/YOUR_PROJECT/backend)
+-   KUBE_INGRESS_BASE_DOMAIN (something like YOUR_PROJECT.beda.software)
 
-```javascript
-import { baseURL } from 'shared/lib/constants.develop';
-
-import { setInstanceBaseURL } from 'aidbox-react/lib/services/instance';
-
-setInstanceBaseURL(baseURL!);
-
-export { baseURL };
-```
+**Note:** backend image repository should be in one group along with monorepo
 
 ### yarn start
 

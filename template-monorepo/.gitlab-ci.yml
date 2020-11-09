@@ -25,6 +25,7 @@ services:
       else
           export TIER="develop"
       fi
+      export TESTS_BACKEND_IMAGE="${TESTS_BACKEND_IMAGE_REPOSITORY}:${TIER}"
   script:
     # BUILD
     - echo -e "section_start:`date +%s`:build_section\r\e[0KBuild"
@@ -47,8 +48,6 @@ services:
     - docker build -t $RELEASE_IMAGE -f Dockerfile.web.release .
     - docker push $RELEASE_IMAGE
     - echo -e "section_end:`date +%s`:release_section\r\e[0K"
-  after_script:
-    - docker-compose -f docker-compose.tests.yaml down
 
 build_test_release:
   <<: *build_test_release

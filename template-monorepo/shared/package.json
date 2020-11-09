@@ -6,8 +6,8 @@
         "lib/**/*"
     ],
     "scripts": {
-        "prepare": "tsc -p tsconfig.json",
-        "start": "tsc -p tsconfig.json -w"
+        "prepare": "tsc",
+        "start": "tsc -w"
     },
     "keywords": [],
     "author": "",
