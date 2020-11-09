@@ -21,6 +21,6 @@ RUN yarn --network-concurrency=1
 ADD . /app
 
 ARG TIER
-RUN cp web/src/services/initialize.${TIER}.ts web/src/services/initialize.ts
+RUN cp shared/src/config.${TIER}.ts shared/src/config.ts
 
 RUN yarn build
