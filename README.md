@@ -92,3 +92,5 @@ Set the current repo path as `.` as answer for the following question:
 ```
 ? Path to monorepo git repository (https://github.com/beda-software/frontend-beda-software-stack.git)
 ```
+
+Also read https://github.com/pavlushkin/frontend-beda-software-stack/tree/master/generator-beda
