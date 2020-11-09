@@ -2,16 +2,25 @@
 
 This generator helps to create predefined frontend (web and mobile) applications compatible to an [Aidbox](https://docs.aidbox.app/) app.
 
+
+### This template includes:
+
+- Template for monorepo (shared files, common settings including linters, ci/cd and etc)
+- Template for mobile (ios/android)
+- Template for web
+
 ### What’s Included?
+
 - A web application based on the create react app typescript template 
 - A React Native mpbile application
 - A shared repository with default FHIR and Aidbox resources type declarations
-- Shared ESLint, Prettier and Git configuration files
+- Shared ESLint and Prettier configuration files
 - CI/CD files (Docker, GitLab) including files to run tests using Aidbox
+- An inialized and configured Git repository
 
 (?) Two index.d.ts files?
 
-### What’s the structure of a new created project?
+### Folder structure (simplified)?
 ```
 frontend
 └───chart
@@ -60,14 +69,13 @@ yarn start
 
 - > (?) How can see a mobile app?
 
+8. Add a remote for the repository
+```
+git remote add origin <path_to_git_repository>
+```
+
 
 # Development (if you want to change this generator or its templates)
-
-This template includes:
-
-- Template for monorepo (shared files, common settings including linters, ci/cd and etc)
-- Template for mobile (ios/android)
-- Template for web
 
 For development - clone the repo then try to run application generator:
 
