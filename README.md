@@ -17,10 +17,11 @@ This template includes:
 
 ## Usage (if you want to create a new frontend project)
 
-Install a [Yeoman](https://www.npmjs.com/package/yo)
-``` ```
+1. Install a [Yeoman](https://www.npmjs.com/package/yo)
+```npm install -g yo```
 
-## npx
+2. Run the generator
+```npx yo beda```
 
 Run in console:
 
