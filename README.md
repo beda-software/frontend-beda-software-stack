@@ -6,6 +6,13 @@ This template includes:
 - Template for mobile (ios/android)
 - Template for web
 
+
+## What’s Included?
+- A web application
+- A React Native application
+- A shared repository
+
+
 # Usage
 
 Run in console:
