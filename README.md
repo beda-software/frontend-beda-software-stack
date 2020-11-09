@@ -14,7 +14,7 @@ Run in console:
 npx yo beda
 ```
 
-Or clone repo then try to run the project generator from repo:
+For development usage - clone the repo then try to run project generator:
 
 ```
 git clone git@github.com:beda-software/frontend-beda-software-stack.git
