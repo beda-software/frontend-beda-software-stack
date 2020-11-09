@@ -34,7 +34,7 @@ frontend
 │   other files
 ```
 
-## Usage (if you want to create a new frontend project)
+## Usage: How to create a new frontend project
 
 1. Install a [Yeoman](https://www.npmjs.com/package/yo) globally:
 
@@ -77,7 +77,7 @@ git remote add origin <path_to_git_repository>
 ```
 
 
-# Development (if you want to change this generator or its templates)
+## Development: How to change this template
 
 For development - clone the repo then try to run application generator:
 
@@ -93,4 +93,5 @@ Set the current repo path as `.` as answer for the following question:
 ? Path to monorepo git repository (https://github.com/beda-software/frontend-beda-software-stack.git)
 ```
 
-Also read https://github.com/beda-software/frontend-beda-software-stack/blob/master/generator-beda/README.md
+## Also read
+https://github.com/beda-software/frontend-beda-software-stack/blob/master/generator-beda/README.md
