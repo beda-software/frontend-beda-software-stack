@@ -7,7 +7,15 @@ Generated code depends on:
 - `react-test-renderer`
 - `jest`
 
-## Install
+## Usage
+
+```
+npx yo beda
+npx yo beda:app # Application
+npx yo beda:component # React Native Container component
+```
+
+## Development
 
 Install [yeoman](https://yeoman.io/):
 
@@ -21,10 +29,11 @@ Link local project as npm package:
 npm link
 ```
 
-## Usage
+Run generator:
 
 ```
 yo beda
 yo beda:app # Application
 yo beda:component # React Native Container component
 ```
+
