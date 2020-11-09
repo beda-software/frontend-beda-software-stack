@@ -46,7 +46,9 @@ npm install -g yo
 npm link
 ```
 
-3. Run specified generator, for example:
+3. Modify specified generator code.
+
+4. Run specified generator, for example:
 
 ```
 yo beda:rn-container
