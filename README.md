@@ -22,7 +22,7 @@ This generator helps to create predefined frontend (web and mobile) applications
 
 (?) Two index.d.ts files?
 
-### Folder structure (simplified)?
+### Folder structure (simplified)
 ```
 frontend
 └───chart
