@@ -27,12 +27,16 @@ This template includes:
 
 3. Reply to questions:
 
-```What do you want to create: Project```
+* ```What do you want to create:```
 
-```Path to monorepo git repository:```
+Choose "Project".
+
+* ```Path to monorepo git repository:```
+
 Hit "Enter" to use default template. If you want to use another template, provide a path to the git repository with another template. Can I provide a link to a local directory?
 
-```Your mobile project name:```
+* ```Your mobile project name:```
+
 Provide a name for mobile app directory that will be added to the frontent directory, e.g. "mobile".
 
 Run in console:
