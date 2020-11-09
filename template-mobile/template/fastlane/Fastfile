@@ -40,8 +40,8 @@ lane :prepare do |options|
   end
 end
 
-lane :copy_constants do |options|
-  sh("cp", "../src/services/initialize.#{options[:stage]}.ts", "../src/services/initialize.ts")
+lane :copy_config do |options|
+  sh("cp", "../../shared/src/config.#{options[:stage]}.ts", "../../shared/src/config.ts")
 end
 
 platform :ios do
@@ -75,7 +75,7 @@ platform :ios do
   end
 
   lane :develop do
-    copy_constants("stage": "develop")
+    copy_config("stage": "develop")
     build_app(
       workspace: "ios/HelloWorld.xcworkspace",
       scheme: "Develop",
@@ -86,7 +86,7 @@ platform :ios do
   end
 
   lane :staging do
-    copy_constants("stage": "staging")
+    copy_config("stage": "staging")
     build_app(
       workspace: "ios/HelloWorld.xcworkspace", 
       scheme: "Staging",
@@ -97,7 +97,7 @@ platform :ios do
   end
 
   lane :production do
-    copy_constants("stage": "master")
+    copy_config("stage": "master")
     build_app(
       workspace: "ios/HelloWorld.xcworkspace", 
       scheme: "Production",
@@ -132,7 +132,7 @@ platform :android do
       env_vars: ["FIREBASE_TOKEN"]
     )
 
-    copy_constants("stage": "develop")
+    copy_config("stage": "develop")
     gradle(
       "project_dir": "android",
       "task": "clean assemble",
@@ -161,7 +161,7 @@ platform :android do
       env_vars: ["FIREBASE_TOKEN"]
     )
 
-    copy_constants("stage": "staging")
+    copy_config("stage": "staging")
     gradle(
       "project_dir": "android",
       "task": "clean assemble",
@@ -188,7 +188,7 @@ platform :android do
       env_vars: ["SUPPLY_JSON_KEY"]
     )
 
-    copy_constants("stage": "master")
+    copy_config("stage": "master")
     gradle(
       "project_dir": "android",
       "task": "clean bundle",

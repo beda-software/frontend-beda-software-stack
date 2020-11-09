@@ -7,6 +7,6 @@ coverage
 htmlcov
 
 # Project-specific files
-shared/src/services/config.ts
+shared/src/config.ts
 sentry.properties
 .env.test.local
