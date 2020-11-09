@@ -11,9 +11,15 @@ This generator helps to create predefined frontend (web and mobile) applications
 
 ### What’s Included?
 
-- A web application based on the create react app typescript template 
-- A React Native mpbile application
+react
+
+react-test-renderer
+jest
+
+- A web application based on the create react app `typescript` template 
+- A React Native mobile application (iOS/Android) with `react-native-navigation`
 - A shared repository with default FHIR and Aidbox resources type declarations
+- Plugged id [aidbox-react](https://github.com/beda-software/aidbox-react) package
 - Shared ESLint and Prettier configuration files
 - CI/CD files (Docker, GitLab) including files to run tests using Aidbox
 - An inialized and configured Git repository
