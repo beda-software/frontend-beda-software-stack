@@ -19,15 +19,12 @@ This generator helps to create predefined frontend (web and mobile) applications
 -   CI/CD files (Docker, GitLab) including files to run tests using Aidbox;
 -   An inialized and configured Git repository.
 
-(?) Two index.d.ts files?
-
 ### Folder structure (simplified)
 
 ```
 frontend
 └───chart
-└───mobile (you can choose the name of this folder)
-└───node_modules
+└───mobile
 └───shared
 └───web
 └───chart
@@ -36,19 +33,13 @@ frontend
 
 ## Usage: How to create a new frontend project
 
-1. Install a [Yeoman](https://www.npmjs.com/package/yo) globally:
-
-```
-npm install -g yo
-```
-
-2. Run this generator:
+1. Run this generator:
 
 ```
 npx yo beda
 ```
 
-3. Reply to questions:
+2. Reply to questions:
 
 -   `What do you want to create:` Choose "Project".
 
@@ -56,31 +47,39 @@ npx yo beda
 
 -   `Your mobile project name:` Provide a name for mobile app directory that will be added to the frontent directory, e.g. "mobile". Wait while generator is installing project files in the "frontend" directory.
 
-4. Go to the "frontend" directory:
+3. Go to the "frontend" directory:
 
 ```
 cd ./frontend
 ```
 
-5. Run the project:
+4. Run the project:
 
 ```
 yarn start
 ```
 
--   > (?) How can I start ony web or mobile app?
+To start web app only:
 
-7. Then open http://localhost:3000/ to see your web app.
+```
+yarn start:web
+```
 
--   > (?) How can see a mobile app?
+To start mobile app only:
 
-8. Add a remote for the repository
+```
+yarn start:mobile
+```
+
+5. Then open http://localhost:3000/ to see your web app.
+
+6. Add a remote for the repository
 
 ```
 git remote add origin <path_to_git_repository>
 ```
 
-For advanced usage and other details check [`template-monorepo`](./template-monorepo/README.md) please
+For advanced usage and other details **check** [`template-monorepo`](./template-monorepo/README.md) please
 
 ## Development: How to change this template
 
@@ -97,7 +96,3 @@ Set the current repo path as `.` as answer for the following question:
 ```
 ? Path to monorepo git repository (https://github.com/beda-software/frontend-beda-software-stack.git)
 ```
-
-## Also read
-
-https://github.com/beda-software/frontend-beda-software-stack/blob/master/generator-beda/README.md
