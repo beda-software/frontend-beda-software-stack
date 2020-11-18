@@ -43,6 +43,15 @@ yarn test:web        # launch tests for web workspace
 yarn test:mobile     # launch tests for mobile workspace
 ```
 
+## Push notifications
+
+Mobile template includes setup for push notifications. To finish up setup:
+
+- On ios use your developer certificate
+
+- On android you need to configure google-services.json. See https://firebase.google.com/docs/android/setup for details
+
+
 ## Troubleshooting
 
 -   Do not forget to add mobile native dependencies to `frontend/package.json` to workspaces/nohoist section
@@ -56,6 +65,6 @@ yarn test:mobile     # launch tests for mobile workspace
 ]
 ```
 
-You can see this error in cli in this case
+If any of native dependencies was omitted you'll see this error
 
 `ERROR Invariant Violation: No callback found with cbID...`

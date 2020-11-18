@@ -11,7 +11,7 @@ This generator helps to create predefined frontend (web and mobile) applications
 ### What’s Included?
 
 -   A web application based on the create react app [typescript template](https://create-react-app.dev/docs/getting-started#creating-a-typescript-app);
--   A React Native mobile application (iOS/Android) with `react-native-navigation`;
+-   A React Native mobile application (iOS/Android) with `react-native-navigation` and `react-native-notifications`;
 -   A shared repository with default FHIR and Aidbox resources type declarations;
 -   Plugged in [aidbox-react](https://github.com/beda-software/aidbox-react) package;
 -   Shared ESLint and Prettier configuration files;
