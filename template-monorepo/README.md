@@ -6,7 +6,13 @@ In the project we have three environments:
 -   staging
 -   production
 
-Local environment is required for developing. Environment config file (`shared/src/config.ts`) is ignored by git. So, feel free to change it.
+Local environment is required for developing. Before you start, run:
+
+```	
+cp shared/src/config.local.ts shared/src/config.ts	
+```	
+
+This file (`shared/src/config.ts`) is ignored by git. So, feel free to change it.
 
 ## CI/CD setup
 
