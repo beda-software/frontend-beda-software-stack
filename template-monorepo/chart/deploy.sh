@@ -3,7 +3,7 @@
 mkdir -p /root/.kube/
 echo "$K8S_CONFIG" > /root/.kube/config
 export KUBECONFIG=/root/.kube/config
-export NAMESPACE="${CI_PROJECT_NAMESPACE}-${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}"
+export NAMESPACE="${CI_PROJECT_NAMESPACE}-${CI_PROJECT_NAME}-${APP_NAME}-${CI_COMMIT_REF_SLUG}"
 kubectl config use-context default
 
 EXTRA_HELM_ARGS=""
@@ -27,7 +27,7 @@ helm upgrade --install \
      --set image.hash="$CI_COMMIT_SHA" \
      --set image.secrets[0].name=gitlab-registry \
      --set application.track="$CI_COMMIT_REF_SLUG" \
-     --set service.url="${CI_COMMIT_REF_SLUG}.${KUBE_INGRESS_BASE_DOMAIN}"\
+     --set service.url="${CI_COMMIT_REF_SLUG}-${APP_NAME}.${KUBE_INGRESS_BASE_DOMAIN}"\
      --set replicaCount=1 \
      ${EXTRA_HELM_ARGS} \
      "${CI_PROJECT_PATH_SLUG}-${CI_COMMIT_REF_SLUG}" \

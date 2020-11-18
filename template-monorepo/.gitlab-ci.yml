@@ -59,6 +59,8 @@ build_test_release:
 deploy_web:
   stage: deploy
   image: registry.bro.engineering/ansible_deploy/helm_deploy:3
+  variables:
+    APP_NAME: web
   script:
     - cd ./chart
     - ./deploy.sh
