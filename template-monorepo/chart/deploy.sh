@@ -3,7 +3,7 @@
 mkdir -p /root/.kube/
 echo "$K8S_CONFIG" > /root/.kube/config
 export KUBECONFIG=/root/.kube/config
-export NAMESPACE="${CI_PROJECT_NAMESPACE}-${CI_COMMIT_REF_SLUG}"
+export NAMESPACE="${CI_PROJECT_NAMESPACE}-${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}"
 kubectl config use-context default
 
 EXTRA_HELM_ARGS=""
