@@ -29,6 +29,8 @@
       "typecheck": "tsc"
     },
     "jest": {
+      "collectCoverageFrom": ["**/*.{ts,tsx}", "!**/node_modules/**", "!**/embed/**", "!**/contrib/**"],
+      "coverageReporters": ["text", "text-summary", "html"],
       "transform": {
         "^.+\\.tsx?$": "ts-jest"
       },

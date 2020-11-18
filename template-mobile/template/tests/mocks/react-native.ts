@@ -31,17 +31,7 @@ export const mockDimensions = () => {
     };
 };
 
-const NativeModules = {
-    SettingsManager: {
-        settings: {
-            AppleLocale: 'he_IL',
-        },
-    },
-    I18nManager: {
-        localeIdentifier: 'he_IL',
-    },
-    ImagePickerManager: jest.fn(),
-};
+const NativeModules = {};
 
 export const mockNativeModules = () => {
     return NativeModules;

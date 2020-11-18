@@ -5,9 +5,8 @@ module.exports = {
     setupFilesAfterEnv: ['./src/setupTests.ts'],
     collectCoverage: false,
     collectCoverageFrom: ['**/*.{ts,tsx}', '!**/node_modules/**', '!**/embed/**', '!**/contrib/**'],
-    coverageDirectory: './htmlcov',
+    coverageDirectory: './coverage',
     coverageReporters: ['text', 'text-summary', 'html'],
     testMatch: ['**/__tests__/**/*.+(ts|tsx|js)'],
-    transform: { '\\.ts(x)$': ['ts-jest'] },
-    transformIgnorePatterns: ['node_modules/(?!axios|react-native)'],
+    transformIgnorePatterns: ['node_modules/(?!axios|react-native)$'],
 };

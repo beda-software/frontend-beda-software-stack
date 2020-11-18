@@ -53,8 +53,8 @@ build_test_release:
   <<: *build_test_release
   artifacts:
     paths:
-    - ./web/htmlcov
-    - ./mobile/htmlcov
+    - ./web/coverage
+    - ./mobile/coverage
 
 deploy_web:
   stage: deploy
