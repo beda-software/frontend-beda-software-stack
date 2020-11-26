@@ -67,6 +67,25 @@ Mobile template includes setup for push notifications. To finish up setup:
 
 -   On android you need to configure google-services.json. See https://firebase.google.com/docs/android/setup for details
 
+## Generators
+
+To avoid writing boilerplate code we have [yeoman](https://github.com/yeoman/yo) generator [generator-beda](https://github.com/beda-software/frontend-beda-software-stack/tree/master/generator-beda).
+
+To install run:
+```
+yarn global add yo
+yarn global add generator-beda
+```
+It will install `yo` globally.
+
+To use run
+
+`yo beda:rn-container`
+
+and answer questions.
+
+In the future we'll provide more generators.
+
 ## Troubleshooting
 
 -   Do not forget to add mobile native dependencies to `frontend/package.json` to workspaces/nohoist section
