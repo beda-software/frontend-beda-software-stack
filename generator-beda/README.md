@@ -1,9 +1,16 @@
 # Generator
 
-Usage: 
+## Installation
 
 ```
-npx yo beda
+yarn global add yo
+yarn global add generator-beda
+```
+
+## Usage
+
+```
+yo beda
 ```
 
 ## Application generator
@@ -11,7 +18,7 @@ npx yo beda
 Usage:
 
 ```
-npx yo beda:app
+yo beda:app
 ```
 
 ## React Native container generator 
@@ -19,7 +26,7 @@ npx yo beda:app
 Usage: 
 
 ```
-npx yo beda:rn-container
+yo beda:rn-container
 ```
 
 Generated code depends on:
@@ -37,7 +44,7 @@ For local generator development:
 1. Install [yeoman](https://yeoman.io/):
 
 ```
-npm install -g yo
+yarn global add yo
 ```
 
 2. Link local project as npm package:
