@@ -60,17 +60,17 @@ CI/CD for whole monorepo is already set up using .gitlab-ci.yml. You need only t
 Before first deploy:
 
 1. fill shared/src/config.TIER.ts with needed settings
-2. create namespace `YOUR_PROJECT-REPOSITORY_NAME-web-TIER` for each tier, where `YOUR_PROJECT` is the name of the group in gitlab, `REPOSITORY_NAME` is the name of this repository (default is frontend) and `TIER` is develop/staging/production.
+2. create namespace `YOUR_PROJECT-REPOSITORY_NAME-TIER-web` for each tier, where `YOUR_PROJECT` is the name of the group in gitlab, `REPOSITORY_NAME` is the name of this repository (default is frontend) and `TIER` is develop/staging/production.
 3. Create deploy token in gitlab for each tier
 4. Run command
 
 ```
-kubectl -n NAMESPACE create secret docker-registry gitlab-registry --docker-username=TOKEN_USERNAME --docker-password=TOKEN_PASSWORD --docker-email=YOUR_EMAIL --docker-server=registry.bro.engineering
+kubectl -n YOUR_PROJECT-REPOSITORY_NAME-TIER-web create secret docker-registry gitlab-registry --docker-username=TOKEN_USERNAME --docker-password=TOKEN_PASSWORD --docker-email=YOUR_EMAIL --docker-server=registry.bro.engineering
 ```
 
 for each namespace
 
-As a result, your site will be accesible via `TIER-web.KUBE_INGRESS_BASE_DOMAIN`, for example `develop-web.example.beda.software`
+As a result, your site will be accesible via `web.TIER.KUBE_INGRESS_BASE_DOMAIN`, for example `web.develop.example.beda.software`
 
 ## Push notifications
 
