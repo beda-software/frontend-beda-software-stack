@@ -4,8 +4,6 @@ import { withRootAccess } from 'aidbox-react/lib/utils/tests';
 declare const process: any;
 
 beforeAll(async () => {
-    jest.useFakeTimers();
-
     if (process.env.CI) {
         setInstanceBaseURL('http://devbox:8080');
     } else {
@@ -37,8 +35,4 @@ afterEach(async () => {
             data: { query: `select drop_before_all(${txId});` },
         });
     });
-});
-
-afterAll(() => {
-    jest.clearAllTimers();
 });
