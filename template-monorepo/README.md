@@ -14,6 +14,35 @@ cp shared/src/config.local.ts shared/src/config.ts
 
 This file (`shared/src/config.ts`) is ignored by git. So, feel free to change it.
 
+### Install
+```sh
+yarn
+cd mobile/ios
+pod install
+cd ../..
+```
+
+### Start
+
+```sh
+yarn start           # start watch all workspaces
+yarn start:web       # start watch web workspace
+yarn start:mobile    # start watch mobile workspace
+```
+
+### Test
+
+```sh
+yarn test            # launch tests for all workspaces
+yarn test:web        # launch tests for web workspace
+yarn test:mobile     # launch tests for mobile workspace
+```
+
+### Dependencies
+
+To update dependeny make proper changes in all workspaces in `package.json` files and run `yarn` from the root.  
+Make sure that you use the same version of most of libraries (especially react/react-native/react-dom).
+
 ## CI/CD setup
 
 See [mobile/README.md](mobile/README.md) for initial setup.
@@ -43,22 +72,6 @@ for each namespace
 
 As a result, your site will be accesible via `TIER-web.KUBE_INGRESS_BASE_DOMAIN`, for example `develop-web.example.beda.software`
 
-### yarn start
-
-```sh
-yarn start           # start watch all workspaces
-yarn start:web       # start watch web workspace
-yarn start:mobile    # start watch mobile workspace
-```
-
-### yarn test
-
-```sh
-yarn test            # launch tests for all workspaces
-yarn test:web        # launch tests for web workspace
-yarn test:mobile     # launch tests for mobile workspace
-```
-
 ## Push notifications
 
 Mobile template includes setup for push notifications. To finish up setup:
@@ -85,20 +98,3 @@ To use run
 and answer questions.
 
 In the future we'll provide more generators.
-
-## Troubleshooting
-
--   Do not forget to add mobile native dependencies to `frontend/package.json` to workspaces/nohoist section
-
-```json
-"nohoist": [
-    "**/react-native",
-    "**/react-native/**",
-    "**/react-native-navigation",
-    "**/react-native-navigation/**"
-]
-```
-
-If any of native dependencies was omitted you'll see this error
-
-`ERROR Invariant Violation: No callback found with cbID...`
