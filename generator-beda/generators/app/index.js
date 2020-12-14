@@ -36,19 +36,35 @@ module.exports = class extends Generator {
         this.spawnCommandSync('git', ['clone', monorepoGitPath, projectName]);
 
         fs.readdirSync(pathTemplateMonorepo).forEach((file) =>
-            fs.moveSync(`${pathTemplateMonorepo}/${file}`, `${path.dirname(pathTemplateMonorepo)}/${file}`, {
-                overwrite: true,
-            }),
+            fs.moveSync(
+                `${pathTemplateMonorepo}/${file}`,
+                `${path.dirname(pathTemplateMonorepo)}/${file}`,
+                {
+                    overwrite: true,
+                },
+            ),
         );
         fs.removeSync(pathTemplateMonorepo);
 
-        this.spawnCommandSync('npx', ['create-react-app', 'web', '--template', templateCRA], { cwd });
+        this.spawnCommandSync('npx', ['create-react-app', 'web', '--template', templateCRA], {
+            cwd,
+        });
 
-        this.spawnCommandSync('mv', ['./web/tsconfig.toReplace.json', './web/tsconfig.json'], { cwd });
+        this.spawnCommandSync('mv', ['./web/tsconfig.toReplace.json', './web/tsconfig.json'], {
+            cwd,
+        });
 
         this.spawnCommandSync(
             'npx',
-            ['react-native', 'init', mobileAppName, '--template', templateCRNA, '--directory', 'mobile'],
+            [
+                'react-native',
+                'init',
+                mobileAppName,
+                '--template',
+                templateCRNA,
+                '--directory',
+                'mobile',
+            ],
             { cwd },
         );
 
@@ -65,10 +81,15 @@ module.exports = class extends Generator {
             cwd,
         });
         this.spawnCommandSync('yarn', ['workspace', 'mobile', 'add', 'shared@0.0.1'], { cwd });
-        this.spawnCommandSync('yarn', ['prepare'], { cwd });
         this.spawnCommandSync('rm', ['web/yarn.lock'], { cwd });
-        this.spawnCommandSync('cp', ['shared/src/config.local.ts', 'shared/src/config.ts'], { cwd });
-        this.spawnCommandSync('yarn', ['exec', 'node', './node_modules/husky/husky.js', 'install'], { cwd });
+        this.spawnCommandSync('cp', ['shared/src/config.local.ts', 'shared/src/config.ts'], {
+            cwd,
+        });
+        this.spawnCommandSync(
+            'yarn',
+            ['exec', 'node', './node_modules/husky/husky.js', 'install'],
+            { cwd },
+        );
 
         // Delete eslint config added by CRA from web because we use common eslint config in the root
         const webPackagePath = `${cwd}/web/package.json`;
