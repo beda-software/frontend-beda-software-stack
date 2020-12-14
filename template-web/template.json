@@ -11,10 +11,12 @@
       "@types/react": "^16.9.0",
       "@types/react-dom": "^16.9.0",
       "@types/react-router-dom": "^5.1.6",
-      "aidbox-react": "^1.0.0",
+      "aidbox-react": "git+https://github.com/beda-software/aidbox-react.git#8af3ccc821edf7008dca3cbdd25740eb37156ecd",
       "classnames": "^2.2.6",
+      "customize-cra": "^1.0.0",
       "node-sass": "^4.14.1",
       "react": "^16.14.0",
+      "react-app-rewired": "^2.1.6",
       "react-dom": "^16.14.0",
       "react-router-dom": "^5.2.0",
       "react-scripts": "3.4.0",
@@ -22,15 +24,15 @@
       "typescript": "^4.0.5"
     },
     "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
+      "start": "react-app-rewired start",
+      "build": "react-app-rewired build",
       "test": "react-scripts test --watchAll=false",
       "eject": "react-scripts eject",
       "typecheck": "tsc"
     },
     "jest": {
-      "collectCoverageFrom": ["**/*.{ts,tsx}", "!**/node_modules/**", "!**/embed/**", "!**/contrib/**"],
-      "coverageReporters": ["text", "text-summary", "html"],
+      "collectCoverageFrom": ["**/*.{ts,tsx}", "!**/node_modules/**", "!**/contrib/**"],
+      "coverageReporters": ["text-summary", "html"],
       "transform": {
         "^.+\\.tsx?$": "ts-jest"
       },
