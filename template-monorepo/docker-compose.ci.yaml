@@ -9,6 +9,7 @@ services:
       - backend
     volumes:
       - ./wait-for-it.sh:/usr/local/bin/wait-for-it.sh
-      - ./htmlcov:/app/htmlcov
+      - ./mobile/coverage:/app/mobile/coverage
+      - ./web/coverage:/app/web/coverage
     environment:
       CI: "true"
