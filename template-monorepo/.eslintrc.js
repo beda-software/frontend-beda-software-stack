@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-        'browser': true,
+        browser: true,
         'jest/globals': true,
     },
     root: true,
@@ -9,7 +9,7 @@ module.exports = {
     plugins: ['@typescript-eslint', 'jest', 'import'],
     rules: {
         'react-native/no-inline-styles': 0,
-        'no-restricted-imports': ['error', { patterns: ['shared/src', 'aidbox-react/src'] }],
+        'no-restricted-imports': ['error', { patterns: ['aidbox-react/lib'] }],
         'prettier/prettier': 0,
         'import/order': [
             'error',

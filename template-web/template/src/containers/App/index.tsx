@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch, Router, Redirect } from 'react-router-dom';
-import { Token } from 'aidbox-react/lib/services/token';
+import { Token } from 'aidbox-react/src/services/token';
 
-import { getWelcomeString } from 'shared/lib/utils/misc';
+import { getWelcomeString } from 'shared/src/utils/misc';
 
 import { history } from 'src/services/history';
 import { Button } from 'src/components/Button';

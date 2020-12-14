@@ -5,11 +5,11 @@ import {
     NotificationCompletion,
     NotificationBackgroundFetchResult,
 } from 'react-native-notifications/lib/dist/interfaces/NotificationCompletion';
-import { isFailure, notAsked } from 'aidbox-react/lib/libs/remoteData';
-import { forceDeleteFHIRResource, saveFHIRResource } from 'aidbox-react/lib/services/fhir';
-import { dispatch } from 'aidbox-react/lib/hooks/bus';
+import { isFailure, notAsked } from 'aidbox-react/src/libs/remoteData';
+import { forceDeleteFHIRResource, saveFHIRResource } from 'aidbox-react/src/services/fhir';
+import { dispatch } from 'aidbox-react/src/hooks/bus';
 
-import { PushSubscription } from 'shared/lib/contrib/aidbox';
+import { PushSubscription } from 'shared/src/contrib/aidbox';
 
 const pushSubscriptionTemplate: Partial<PushSubscription> = {
     resourceType: 'PushSubscription',
@@ -58,24 +58,31 @@ Notifications.events().registerNotificationReceivedForeground(
 );
 
 Notifications.events().registerNotificationReceivedBackground(
-    (notification: Notification, completion: (response: NotificationBackgroundFetchResult) => void) => {
+    (
+        notification: Notification,
+        completion: (response: NotificationBackgroundFetchResult) => void,
+    ) => {
         completion(NotificationBackgroundFetchResult.NEW_DATA);
     },
 );
 
-Notifications.events().registerNotificationOpened((notification: Notification, completion: () => void) => {
-    const data = getNotificationData(notification);
+Notifications.events().registerNotificationOpened(
+    (notification: Notification, completion: () => void) => {
+        const data = getNotificationData(notification);
 
-    dispatch({ type: 'NotificationOpened', payload: data });
+        dispatch({ type: 'NotificationOpened', payload: data });
 
-    completion();
-});
+        completion();
+    },
+);
 
 function getNotificationData(notification: Notification): { action: string; params?: any } {
     if (Platform.OS === 'android') {
         return {
             ...notification.payload,
-            params: notification.payload.params ? JSON.parse(notification.payload.params) : undefined,
+            params: notification.payload.params
+                ? JSON.parse(notification.payload.params)
+                : undefined,
         };
     } else {
         return notification.payload.data;

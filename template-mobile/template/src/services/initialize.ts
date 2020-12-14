@@ -1,8 +1,8 @@
 import * as Sentry from '@sentry/react-native';
 
-import config from 'shared/lib/config';
+import config from 'shared/src/config';
 
-import { setInstanceBaseURL } from 'aidbox-react/lib/services/instance';
+import { setInstanceBaseURL } from 'aidbox-react/src/services/instance';
 
 if (config.mobileSentryDSN) {
     Sentry.init({
