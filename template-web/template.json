@@ -11,7 +11,7 @@
       "@types/react": "^16.9.0",
       "@types/react-dom": "^16.9.0",
       "@types/react-router-dom": "^5.1.6",
-      "aidbox-react": "git+https://github.com/beda-software/aidbox-react.git#8af3ccc821edf7008dca3cbdd25740eb37156ecd",
+      "aidbox-react": "git+https://github.com/beda-software/aidbox-react.git#932185f6a58a47f746264dc7a7c1b7cbbf24733c",
       "classnames": "^2.2.6",
       "customize-cra": "^1.0.0",
       "node-sass": "^4.14.1",
