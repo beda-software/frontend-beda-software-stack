@@ -34,16 +34,6 @@
             "web",
             "mobile",
             "shared"
-        ],
-        "nohoist": [
-            "**/react-native",
-            "**/react-native/**",
-            "**/react-native-navigation",
-            "**/react-native-navigation/**",
-            "**/react-native-notifications",
-            "**/react-native-notifications/**",
-            "**/react-native-device-info",
-            "**/react-native-device-info/**"
         ]
     },
     "lint-staged": {
