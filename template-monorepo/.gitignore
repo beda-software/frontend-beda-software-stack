@@ -1,5 +1,4 @@
 node_modules
-shared/src
 *.log
 coverage
 .DS_Store
