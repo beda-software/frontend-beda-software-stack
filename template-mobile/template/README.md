@@ -49,7 +49,7 @@ npx @sentry/wizard -i reactNative -p ios android
 - Click settings
 - Change name from `frontend` to `HelloWorld`
 - Click workflow, choose codesigning section and upload android `release.keystore` that you generated on previous steps. Specify key alias, store password and key password.
-- Upload `ios/sentry propertie`s file under `Generic file storage` section, use `SENTRY_PROPERTIES_URL` as Storage ID
+- Upload `ios/sentry propertie`s file under `Generic file storage` section, use `SENTRY_PROPERTIES` as Storage ID
 - Upload `supply.json` file under Generic file storage section, use `SUPPLY_JSON_KEY` as Storage ID.
 
 - In workflow, click secrets and add the following secrets:
