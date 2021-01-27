@@ -1,0 +1,35 @@
+---
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: react-native
+app:
+  envs:
+  - FASTLANE_XCODE_LIST_TIMEOUT: '120'
+  - opts:
+      is_expand: false
+    FASTLANE_WORK_DIR: mobile
+trigger_map:
+- push_branch: "*"
+  workflow: ios
+- pull_request_source_branch: "*"
+  workflow: ios
+workflows:
+  ios:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4: {}
+    - fastlane@2:
+        inputs:
+        - lane: ios $TIER
+        - work_dir: "$FASTLANE_WORK_DIR"
+  android:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4: {}
+    - fastlane@2:
+        inputs:
+        - lane: android $TIER
+        - work_dir: "$FASTLANE_WORK_DIR"
+

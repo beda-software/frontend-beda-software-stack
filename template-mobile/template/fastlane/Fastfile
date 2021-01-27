@@ -97,7 +97,7 @@ platform :ios do
   end
 
   lane :production do
-    copy_config("stage": "master")
+    copy_config("stage": "production")
     build_app(
       workspace: "ios/HelloWorld.xcworkspace", 
       scheme: "Production",
@@ -188,7 +188,7 @@ platform :android do
       env_vars: ["SUPPLY_JSON_KEY"]
     )
 
-    copy_config("stage": "master")
+    copy_config("stage": "production")
     gradle(
       "project_dir": "android",
       "task": "clean bundle",
