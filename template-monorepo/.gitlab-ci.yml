@@ -65,10 +65,16 @@ deploy_web:
     - cd ./chart
     - ./deploy.sh
   only:
-    - production
-    - staging
-    - develop
-
+     refs:
+      - production
+      - staging
+      - develop
+    changes:
+      - Dockerfile
+      - Dockerfile.web.release.tpl
+      - chart/**/*
+      - web/**/*
+      - shared/**/*
 
 deploy_mobile:
   stage: deploy
@@ -86,7 +92,11 @@ deploy_mobile:
     - curl https://app.bitrise.io/app/$BITRISE_APP_ID/build/start.json --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"$BITRISE_BUILD_TRIGGER_TOKEN\"},\"build_params\":{\"workflow_id\":\"ios\",\"branch\":\"$CI_COMMIT_REF_NAME\",\"commit_hash\":\"$CI_COMMIT_SHA\",\"environments\":[{\"mapped_to\":\"TIER\",\"value\":\"$TIER\",\"is_expand\":true}]},\"triggered_by\":\"GitLab CI\"}"
     - curl https://app.bitrise.io/app/$BITRISE_APP_ID/build/start.json --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"$BITRISE_BUILD_TRIGGER_TOKEN\"},\"build_params\":{\"workflow_id\":\"android\",\"branch\":\"$CI_COMMIT_REF_NAME\",\"commit_hash\":\"$CI_COMMIT_SHA\",\"environments\":[{\"mapped_to\":\"TIER\",\"value\":\"$TIER\",\"is_expand\":true}]},\"triggered_by\":\"GitLab CI\"}"
   only:
-    - production
-    - staging
-    - develop
+    refs:
+      - production
+      - staging
+      - develop
+    changes:
+      - mobile/**/*
+      - shared/**/*
 
