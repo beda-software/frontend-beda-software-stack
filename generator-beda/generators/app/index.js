@@ -50,10 +50,6 @@ module.exports = class extends Generator {
             cwd,
         });
 
-        this.spawnCommandSync('mv', ['./web/tsconfig.toReplace.json', './web/tsconfig.json'], {
-            cwd,
-        });
-
         this.spawnCommandSync(
             'npx',
             [

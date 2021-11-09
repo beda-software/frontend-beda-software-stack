@@ -13,7 +13,7 @@
     "@sentry/react-native": "^1.9.0",
     "aidbox-react": "git+https://github.com/beda-software/aidbox-react.git#932185f6a58a47f746264dc7a7c1b7cbbf24733c",
     "lodash": "^4.17.20",
-    "react": "^16.14.0",
+    "react": "^17.0.2",
     "react-native": "0.63.3",
     "react-native-device-info": "^7.0.2",
     "react-native-navigation": "^7.2.0",
@@ -27,12 +27,12 @@
     "@testing-library/react-native": "^7.1.0",
     "@types/jest": "^25.2.3",
     "@types/lodash": "^4.14.163",
-    "@types/react": "^16.9.0",
+    "@types/react": "^17.0.34",
     "@types/react-native": "^0.63.2",
     "@types/react-native-navigation": "^2.0.0",
     "@types/react-test-renderer": "^16.9.2",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1",
-    "typescript": "^4.0.5"
+    "typescript": "^4.4.4"
   }
 }

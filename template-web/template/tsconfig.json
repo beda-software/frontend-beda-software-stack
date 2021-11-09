@@ -8,7 +8,8 @@
       "esnext"
     ],
     "jsx": "react",
-    "module": "esnext"
+    "module": "esnext",
+    "baseUrl": "."
   },
   "include": [
     "src"

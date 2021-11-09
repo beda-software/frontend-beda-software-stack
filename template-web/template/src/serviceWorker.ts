@@ -98,7 +98,7 @@ function registerValidSW(swUrl: string, config?: Config) {
         };
       };
     })
-    .catch((error) => {
+    .catch((error: any) => {
       console.error("Error during service worker registration:", error);
     });
 }
@@ -139,7 +139,7 @@ export function unregister() {
       .then((registration) => {
         registration.unregister();
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.error(error.message);
       });
   }
