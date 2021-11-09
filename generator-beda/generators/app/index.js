@@ -45,7 +45,7 @@ module.exports = class extends Generator {
             ),
         );
         fs.removeSync(pathTemplateMonorepo);
-
+        this.spawnCommandSync('yarn', ['policies', 'set-version', '1.19.0'], { cwd });
         this.spawnCommandSync('npx', ['create-react-app', 'web', '--template', templateCRA], {
             cwd,
         });
