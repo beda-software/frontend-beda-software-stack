@@ -89,8 +89,8 @@ deploy_mobile:
           export TIER="develop"
       fi
   script:
-    - curl https://app.bitrise.io/app/$BITRISE_APP_ID/build/start.json --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"$BITRISE_BUILD_TRIGGER_TOKEN\"},\"build_params\":{\"workflow_id\":\"ios\",\"branch\":\"$CI_COMMIT_REF_NAME\",\"commit_hash\":\"$CI_COMMIT_SHA\",\"environments\":[{\"mapped_to\":\"TIER\",\"value\":\"$TIER\",\"is_expand\":true}]},\"triggered_by\":\"GitLab CI\"}"
-    - curl https://app.bitrise.io/app/$BITRISE_APP_ID/build/start.json --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"$BITRISE_BUILD_TRIGGER_TOKEN\"},\"build_params\":{\"workflow_id\":\"android\",\"branch\":\"$CI_COMMIT_REF_NAME\",\"commit_hash\":\"$CI_COMMIT_SHA\",\"environments\":[{\"mapped_to\":\"TIER\",\"value\":\"$TIER\",\"is_expand\":true}]},\"triggered_by\":\"GitLab CI\"}"
+    - curl https://app.bitrise.io/app/$BITRISE_APP_ID/build/start.json --fail-with-body --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"$BITRISE_BUILD_TRIGGER_TOKEN\"},\"build_params\":{\"workflow_id\":\"ios\",\"branch\":\"$CI_COMMIT_REF_NAME\",\"commit_hash\":\"$CI_COMMIT_SHA\",\"environments\":[{\"mapped_to\":\"TIER\",\"value\":\"$TIER\",\"is_expand\":true}]},\"triggered_by\":\"GitLab CI\"}"
+    - curl https://app.bitrise.io/app/$BITRISE_APP_ID/build/start.json --fail-with-body --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"$BITRISE_BUILD_TRIGGER_TOKEN\"},\"build_params\":{\"workflow_id\":\"android\",\"branch\":\"$CI_COMMIT_REF_NAME\",\"commit_hash\":\"$CI_COMMIT_SHA\",\"environments\":[{\"mapped_to\":\"TIER\",\"value\":\"$TIER\",\"is_expand\":true}]},\"triggered_by\":\"GitLab CI\"}"
   only:
     refs:
       - production
